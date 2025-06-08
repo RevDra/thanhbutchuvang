@@ -1,0 +1,439 @@
+/* Import fonts từ Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&family=Noto+Sans&display=swap');
+
+/* Add at the top of your CSS file */
+html {
+  scroll-behavior: smooth;
+}
+/* Chọn cặp font */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; /* Hoặc 'Crimson Pro', 'Prata' */
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #ede0d4; /* Màu giấy cổ điển */
+    background-image: url('https://scontent.fsgn2-10.fna.fbcdn.net/v/t39.30808-6/498266077_122121121760815736_7442356772514519487_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeGItq2SZpU7CH2_fX8N1uW5Zz9NzW7WnqRnP03NbtaepHsAHDxvTA-oDMbAu8YunoJ0lu17DvsvCwh6eSYt1qU3&_nc_ohc=-ttkVyKkq2kQ7kNvwGrt3Ph&_nc_oc=Adl7WyETvWDv_6Mp6pbXeP2oHy_fuWNn2-pr4QbjQUe3hw7VMpuWaSQR52CXS9AeP6k&_nc_zt=23&_nc_ht=scontent.fsgn2-10.fna&_nc_gid=hQkmj2kdlGrBUmqPKQIM_A&oh=00_AfNsZzghYGORHC0bFsz6pJQjCj-bR6X5Kc3gjtRUXDipbA&oe=6846ABC8');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%);
+    background-size: 60px 60px;
+    animation: backgroundMove 30s linear infinite;
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5deb3; /* Màu be cổ điển */
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+
+}
+
+header .logo-text p:first-child {
+    color: #000; /* Chữ dòng trên thành màu đen */
+}
+
+header .logo-text p:last-child {
+    color: #008000; /* Chữ dòng dưới vẫn xanh lá cây */
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Làm logo tròn */
+    margin-right: 15px; /* Cách logo với chữ */
+}
+
+.logo a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.logo a:hover {
+    opacity: 0.9;
+}
+.logo-text {
+    display: flex;
+    flex-direction: column; /* Xếp chữ thành 2 dòng */
+    text-align: left;
+}
+
+.logo-text p {
+    font-size: 16px;
+}
+
+.slogan {
+    font-size: 16px;
+    color: #008000; /* Xanh lá cây */
+    font-style: italic;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #008000; /* Xanh lá cây */
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #d2b48c; /* Màu be đậm hơn */
+    color: #ffffff; /* Chữ trắng nổi bật */
+    transition: 0.3s;
+}
+
+.content-list {
+    display: flex;
+    flex-direction: column; /* Sắp xếp card thành các dòng riêng biệt */
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 150px; /* Kích thước ảnh */
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px; /* Tạo khoảng cách giữa ảnh và văn bản */
+}
+
+.card-text {
+    flex: 1; /* Đảm bảo văn bản chiếm hết phần còn lại của card */
+}
+
+.card h3 {
+    margin: 5px 0;
+    color: #0033cc;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #ffd700;
+    color: #0033cc;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.card a:hover {
+    background: #0033cc;
+    color: #ffd700;
+}
+
+.banner {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin: 10px 0;
+    color: #0033cc;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #ffd700;
+    color: #0033cc;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.card a:hover {
+    background: #0033cc;
+    color: #ffd700;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #076836;
+    color: white;
+}
+
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+header {
+    padding: 15px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #008000;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005500;
+}
+
+.article-card {
+    opacity: 0; /* Bắt đầu ẩn */
+    transform: translateY(20px); /* Dịch xuống */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.article-card.visible {
+    opacity: 1; /* Hiện lên */
+    transform: translateY(0); /* Trở về vị trí ban đầu */
+}
+
+@keyframes backgroundMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 60px 60px; }
+}
+
+/* Hiệu ứng chuyển trang */
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f5deb3;
+    transform: translateX(-100%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideOut {
+    from { transform: translateX(0); }
+    to { transform: translateX(100%); }
+}
+
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-link {
+    display: inline-block;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    background: white;
+    border-radius: 25px;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.search-button {
+    background: #076836;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background: #054e28;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .search-form {
+        margin: 0 20px;
+    }
+    
+    .search-input {
+        font-size: 14px;
+    }
+    
+    .search-button {
+        padding: 8px 15px;
+    }
+}
+
+/* Search Modal Styles */
+.search-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 100px;
+    z-index: 1000;
+}
+
+.search-modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close-button {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+/* Search Results Styling */
+.search-result-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease;
+}
+
+.search-result-item:hover {
+    background-color: #f5f5f5;
+}
+
+.result-description {
+    color: #666;
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.result-tags {
+    margin-top: 8px;
+}
+
+.tag {
+    display: inline-block;
+    background: #e0e0e0;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    margin-right: 5px;
+    color: #666;
+}
